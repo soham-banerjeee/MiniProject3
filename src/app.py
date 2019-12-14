@@ -2,8 +2,9 @@ import json
 
 from flask import request
 
-from . import create_app, database
-from .pet_model import Cats
+from database import *
+from init import create_app
+from models import Cats
 
 app = create_app()
 

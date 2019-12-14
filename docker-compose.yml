@@ -10,4 +10,4 @@ services:
       - db_volume:/var/lib/postgresql
 
 volumes:
-  db_volume: 
+  db_volume:
