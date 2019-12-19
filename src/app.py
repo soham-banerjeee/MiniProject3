@@ -16,13 +16,13 @@ def add():
     price = data['price']
     breed = data['breed']
 
-    database.add_instance(Cats, name=name, price=price, breed=breed)
+    add_instance(Cats, name=name, price=price, breed=breed)
     return json.dumps("Added"), 200
 
 
 @app.route('/', methods=['GET'])
 def fetch():
-    cats = database.get_all(Cats)
+    cats = get_all(Cats)
     all_cats = []
     for cat in cats:
         new_cat = {
@@ -40,11 +40,11 @@ def fetch():
 def edit(cat_id):
     data = request.get_json()
     new_price = data['price']
-    database.edit_instance(Cats, id=cat_id, price=new_price)
+    edit_instance(Cats, id=cat_id, price=new_price)
     return json.dumps("Edited"), 200
 
 
 @app.route('/remove/<cat_id>', methods=['DELETE'])
 def remove(cat_id):
-    database.delete_instance(Cats, id=cat_id)
+    delete_instance(Cats, id=cat_id)
     return json.dumps("Deleted"), 200
