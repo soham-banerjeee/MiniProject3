@@ -1,0 +1,3 @@
+CREATE USER test;
+CREATE DATABASE blog_api_db;
+GRANT ALL PRIVILEGES ON DATABASE blog_api_db TO test;

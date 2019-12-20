@@ -1,15 +1,26 @@
-import os
-'''
-user = os.environ['POSTGRES_USER']
-password = os.environ['POSTGRES_PASSWORD']
-host = os.environ['POSTGRES_HOST']
-database = os.environ['POSTGRES_DB']
-port = os.environ['POSTGRES_PORT']
-'''
-user = "test"
-password = "password"
-host = "localhost"
-database = "example"
-port = 5432
+# /src/config.py
 
-DATABASE_CONNECTION_URI = f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{database}'
+import os
+
+class Development(object):
+    """
+    Development environment configuration
+    """
+    DEBUG = True
+    TESTING = False
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+
+class Production(object):
+    """
+    Production environment configurations
+    """
+    DEBUG = False
+    TESTING = False
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY')
+
+app_config = {
+    'development': Development,
+    'production': Production,
+}
