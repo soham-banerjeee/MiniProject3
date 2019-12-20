@@ -9,7 +9,7 @@ services:
     volumes:
       - db_volume:/var/lib/postgresql
   db:
-    container_name: postgres_soham
+    container_name: postgres2
     build:
       context: ./Docker
       dockerfile: db.Dockerfile
