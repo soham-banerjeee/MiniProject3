@@ -11,11 +11,11 @@ Upload it to Github and submit a link to the repo branch called "part2"
 ## Solution
 My API supports the following actions at the following URL extensions:
 
-Create a blogpost: http://127.0.0.1/api/v1/blogposts/ [POST]
-Retrieve all blogposts: http://127.0.0.1/api/v1/blogposts/ [GET]
-Retrieve a single blogpost by ID: http://127.0.0.1/api/v1/blogposts/<id> [GET]
-Update a blogpost: http://127.0.0.1/api/v1/blogposts/<id> [PUT]
-Delete a blogpost: http://127.0.0.1/api/v1/blogposts/<id> [DELETE]
+- Create a blogpost: http://127.0.0.1/api/v1/blogposts/ [POST]
+- Retrieve all blogposts: http://127.0.0.1/api/v1/blogposts/ [GET]
+- Retrieve a single blogpost by ID: http://127.0.0.1/api/v1/blogposts/<id> [GET]
+- Update a blogpost: http://127.0.0.1/api/v1/blogposts/<id> [PUT]
+- Delete a blogpost: http://127.0.0.1/api/v1/blogposts/<id> [DELETE]
   
   
 Please find a screenshot of all the blogposts:
